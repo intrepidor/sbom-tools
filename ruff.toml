@@ -1,0 +1,28 @@
+[tool.ruff]
+# Specify the line length that Ruff should enforce.
+line-length = 119
+
+# Enable specific linting rules.
+select = [
+    "E",  # Pyflakes error codes
+    "F",  # Pyflakes warning codes
+    "W",  # PEP8 warning codes
+    "C90",  # Cyclomatic complexity
+]
+
+# Exclude specific directories or files from linting.
+exclude = [
+    "venv",
+    "__pycache__",
+    ".git",
+]
+
+# Enable or disable specific rules.
+ignore = [
+    "E501",  # Ignore line length errors
+]
+
+# Configure specific rules.
+[tool.ruff.rules]
+# Set the maximum cyclomatic complexity.
+C901 = { max-complexity = 10 }
